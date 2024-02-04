@@ -16,6 +16,12 @@ class RidwanLibraryBookAuthor(models.Model):
         string='Books'
     )
 
+    code = fields.Char(
+        string='Code'
+    )
+
+    
+
 
 class RidwanLibraryBookPubHouse(models.Model):
     _name = 'ridwan_library.book.pub_house'
