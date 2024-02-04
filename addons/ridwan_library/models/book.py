@@ -32,6 +32,9 @@ class RidwanLibraryBookPubHouse(models.Model):
         string='Books'
     )
     
+    code_qr = fields.Char(
+        string='Code QR'
+    )
 class RidwanLibraryBookCopyLoan(models.Model):
     _name = 'ridwan_library.book.copy.loan'
     _description = 'Book Copies Loan'
