@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="main_ridwan_library"
+        name="Ridwan Library"
+    />
+
+    <menuitem
+        id="ridwan_library_book_menu"
+        name="Books"
+        parent="main_ridwan_library"
+    />    
+
+    <menuitem
+        id="ridwan_library_list_book_menu"
+        name="List of Books"
+        action="ridwan_library_book_action"
+        parent="ridwan_library_book_menu"
+    />    
+
+    <menuitem
+        id="ridwan_library_book_copy_menu"
+        name="Books Copy"
+        action="ridwan_library_book_copy_action"
+        parent="ridwan_library_book_menu"
+    />        
+    
+    <menuitem
+        id="ridwan_library_book_copy_loan_menu"
+        name="Books Copy Loan"
+        action="ridwan_library_book_copy_loan_action"
+        parent="ridwan_library_book_menu"
+    />    
+
+    <menuitem
+        id="ridwan_library_book_author_menu"
+        name="Authors"
+        action="ridwan_library_book_author_action"
+        parent="main_ridwan_library"
+    />    
+
+    <menuitem
+        id="ridwan_library_book_pub_house_menu"
+        name="Publishing Houses"
+        action="ridwan_library_book_pub_house_action"
+        parent="main_ridwan_library"
+    />
+
+</odoo>

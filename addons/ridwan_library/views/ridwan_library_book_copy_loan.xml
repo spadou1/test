@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="ridwan_library_book_copy_loan_action" model="ir.actions.act_window">
+        <field name="name">Book Copies Loan</field>
+        <field name="res_model">ridwan_library.book.copy.loan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="ridwan_library_book_copy_loan_tree" model="ir.ui.view">
+        <field name="name">ridwan library book copy loan tree</field>
+        <field name="model">ridwan_library.book.copy.loan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="copy_id" />
+                <field name="engaged_id" />
+                <field name="from_date" />
+                <field name="to_date" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="ridwan_library_book_copy_loan_form" model="ir.ui.view">
+        <field name="name">ridwan library book copy loan form</field>
+        <field name="model">ridwan_library.book.copy.loan</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="copy_id" />
+                            <field name="engaged_id" />
+                        </group>
+                        <group>
+                            <field name="from_date"/>
+                            <field name="to_date"/>
+                        </group>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

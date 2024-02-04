@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_ridwan_library_book_author,access_ridwan_library_book_author,model_ridwan_library_book_author,base.group_user,1,1,1,1
+access_ridwan_library_book_pub_house,access_ridwan_library_book_pub_house,model_ridwan_library_book_pub_house,base.group_user,1,1,1,1
+access_ridwan_library_book_copy_loan,access_ridwan_library_book_copy_loan,model_ridwan_library_book_copy_loan,base.group_user,1,1,1,1
+access_ridwan_library_book_copy,access_ridwan_library_book_copy,model_ridwan_library_book_copy,base.group_user,1,1,1,1
+access_ridwan_library_book,access_ridwan_library_book,model_ridwan_library_book,base.group_user,1,1,1,1

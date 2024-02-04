@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <record id="ridwan_library_book_copy_action" model="ir.actions.act_window">
+        <field name="name">Book Copy</field>
+        <field name="res_model">ridwan_library.book.copy</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="ridwan_library_book_copy_search" model="ir.ui.view">
+        <field name="name">ridwan library book copy search</field>
+        <field name="model">ridwan_library.book.copy</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="book_id" />
+                <filter string="Available" name="Available" domain="[('state', '=', 'available')]" />
+                <filter string="Loan" name="Loan" domain="[('state', '=', 'loan')]" />
+            </search>
+        </field>
+    </record>
+
+    <record id="ridwan_library_book_copy_tree" model="ir.ui.view">
+        <field name="name">ridwan library book copy tree</field>
+        <field name="model">ridwan_library.book.copy</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="book_id" />
+                <field name="state" widget="badge" decoration-success="state == 'available'"
+                    decoration-danger="state == 'loan'" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="ridwan_library_book_copy_form" model="ir.ui.view">
+        <field name="name">ridwan library book copy form</field>
+        <field name="model">ridwan_library.book.copy</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="book_id" />
+                        <field name="state" />
+                    </group>
+                    <label for="loan_ids" string="Loan"/>
+                    <field name="loan_ids">
+                        <tree>
+                            <field name="engaged_id" />
+                            <field name="from_date" />
+                            <field name="to_date" />
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
